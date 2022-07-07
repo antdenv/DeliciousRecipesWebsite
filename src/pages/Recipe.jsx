@@ -7,14 +7,14 @@ function Recipe() {
     let params = useParams();
     const [active, setActive] = useState('instructions');
 
-    const getRecipe = async () => {
-        const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`);
+    const getRecipe = async (name) => {
+        const data = await fetch(`https://api.spoonacular.com/recipes/${name}/information?apiKey=${process.env.REACT_APP_API_KEY}`);
         const details = await data.json();
         setRecipe(details);
     };
 
     useEffect(() => {
-        getRecipe();
+        getRecipe(params.name);
     }, [params.name]);
 
     return (
