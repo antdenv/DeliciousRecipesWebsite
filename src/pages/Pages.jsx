@@ -4,7 +4,7 @@ import Searched from "./Searched";
 import Recipe from './Recipe';
 import Category from "../components/Category";
 import Search from "../components/Search";
-import {BrowserRouter as Router, Route, Link, Routes, useLocation} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import styled from 'styled-components';
 import {GiKnifeFork} from 'react-icons/gi';
 
